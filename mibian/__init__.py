@@ -29,7 +29,7 @@ def impliedVolatility(className, args, callPrice=None, putPrice=None, high=500.0
 		if args[1]>args[0] + putPrice:
 			return 0.001            
 	decimals = len(str(target).split('.')[1])		# Count decimals
-	for i in range(10000):	# To avoid infinite loops
+	for i in range(250):	# To avoid infinite loops
 		mid = (high + low) / 2
 		if mid < 0.00001:
 			mid = 0.00001
